@@ -132,3 +132,6 @@ dmypy.json
 
 # IDE settings
 .vscode/
+
+# Git Config
+.gitconfig
