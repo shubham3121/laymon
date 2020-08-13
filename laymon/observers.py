@@ -28,5 +28,7 @@ class FeatureMapObserverFactory(ObserverFactory):
 
     def create(self, layer, layer_name):
         return FeatureMapObserver(
-            layer=layer, layer_name=layer_name, update_display=self.display_object().update_display
+            layer=layer,
+            layer_name=layer_name,
+            update_display=self.display_object().update_display,
         )

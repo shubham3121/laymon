@@ -15,7 +15,9 @@ class FeatureMapMonitor(Monitor):
     def add_observer(self, layer_observer):
         layer = layer_observer.get_layer()
         layer_name = layer_observer.get_layer_name()
-        _layer_observer = ActivationMapHook({"object": layer_observer, "parameters": None, "handler": None})
+        _layer_observer = ActivationMapHook(
+            {"object": layer_observer, "parameters": None, "handler": None}
+        )
         if layer_name in self._layer_observers:
             return
         self._layer_observers[layer_name] = _layer_observer
@@ -43,6 +45,7 @@ class FeatureMapMonitor(Monitor):
                 observer.parameters = out.detach()
             except NameError:
                 raise LayerRegisterException(layer_name=layer_name)
+
         return hook
 
     def notify_observers(self):

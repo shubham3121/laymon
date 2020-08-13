@@ -18,7 +18,9 @@ class FeatureMapMonitoring(object):
         return self._add_layer(layer=layer, layer_name=layer_name)
 
     def _add_layer(self, layer, layer_name):
-        layer_observer = self.observer_factory.create(layer=layer, layer_name=layer_name)
+        layer_observer = self.observer_factory.create(
+            layer=layer, layer_name=layer_name
+        )
         self.monitor.add_observer(layer_observer=layer_observer)
         return layer_observer
 

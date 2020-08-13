@@ -19,6 +19,7 @@ class Monitor:
     observers, get the list of registered observers at any given point of time and
     notify/ update the observers when there is a change in the monitored parameters.
     """
+
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
@@ -42,6 +43,7 @@ class Observer:
     """
     Abstract class to update the observer's state when there is a change in the parameters.
     """
+
     __metaclass__ = abc.ABCMeta
 
     _description = NotImplementedError
@@ -58,6 +60,7 @@ class Display:
     """
     Abstract class to display the analysis derived from the various observers.
     """
+
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
@@ -69,6 +72,7 @@ class ObserverFactory:
     """
     Abstract class for creating an observer factory
     """
+
     __metaclass__ = abc.ABCMeta
 
     display_object = None

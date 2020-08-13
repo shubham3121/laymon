@@ -20,6 +20,7 @@ class SingleDimensionalLayerWarning(Warning):
     Waring to indicate that the layer trying to be visualized is a single
     dimensional layer.
     """
+
     default_message = "Layer is a single dimensional layer."
 
     def __init__(self, layer_name, message=default_message):

@@ -4,7 +4,12 @@ from .interfaces import Display
 
 class FeatureMapDisplay(Display):
     def __init__(self):
-        self._figure, self._subplots, self._parameters, self.title = None, [], None, None
+        self._figure, self._subplots, self._parameters, self.title = (
+            None,
+            [],
+            None,
+            None,
+        )
 
     def display(self):
         activation = self._parameters
@@ -15,7 +20,7 @@ class FeatureMapDisplay(Display):
             self._figure.show()
 
         for idx in range(activation.size(0)):
-            self._subplots[idx].imshow(activation[idx], interpolation='None')
+            self._subplots[idx].imshow(activation[idx], interpolation="None")
         self._figure.canvas.draw()
         self._figure.show()
 
