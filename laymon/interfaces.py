@@ -1,7 +1,7 @@
 """
-==============================================================================
+===========================================
 Abstract Classes
-==============================================================================
+===========================================
 """
 
 import abc
@@ -65,9 +65,8 @@ class Display:
 
 class ObserverFactory:
     """
-    Abstract class for creating an observer factory.
-    This factory class is used to create a new observers.
-    Define a display class to visualize an observer's parameters/states.
+    Abstract class for creating a factory to create new observers with a display attached to them.
+    The `display_object` stores a display class used to visualize an observer's parameters/states.
     """
 
     __metaclass__ = abc.ABCMeta
