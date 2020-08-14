@@ -1,6 +1,6 @@
 """Top-level package for PyLaymon."""
 
-from laymon.monitoring import FeatureMapMonitor
+from laymon.monitoring import FeatureMapMonitoring
 from laymon.observers import FeatureMapObserver, FeatureMapDisplay
 from laymon.monitoring import FeatureMapMonitor
 

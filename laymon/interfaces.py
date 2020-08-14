@@ -2,22 +2,19 @@
 ==============================================================================
 Abstract Classes
 ==============================================================================
-
-==============================================================================
-Adding and removing hooks.
-==============================================================================
-model = ...
-handle = model.register_forward_hook(...)
-handle.remove()
 """
+
 import abc
 
 
 class Monitor:
     """
-    Abstract class to monitors the observers. Methods to dynamically add or remove
-    observers, get the list of registered observers at any given point of time and
-    notify/ update the observers when there is a change in the monitored parameters.
+    Abstract class to monitor the observers.
+    Methods to:
+     1. Add observers
+     2. Remove observers
+     3. Get the list of registered observers
+     4. Notify the observers when there is a change in the monitored parameters.
     """
 
     __metaclass__ = abc.ABCMeta
@@ -40,9 +37,7 @@ class Monitor:
 
 
 class Observer:
-    """
-    Abstract class to update the observer's state when there is a change in the parameters.
-    """
+    """Abstract class to describe and update the state of an observer."""
 
     __metaclass__ = abc.ABCMeta
 
@@ -58,7 +53,7 @@ class Observer:
 
 class Display:
     """
-    Abstract class to display the analysis derived from the various observers.
+    Abstract class to create and update the displays attached to an observer.
     """
 
     __metaclass__ = abc.ABCMeta
@@ -70,7 +65,9 @@ class Display:
 
 class ObserverFactory:
     """
-    Abstract class for creating an observer factory
+    Abstract class for creating an observer factory.
+    This factory class is used to create a new observers.
+    Define a display class to visualize an observer's parameters/states.
     """
 
     __metaclass__ = abc.ABCMeta

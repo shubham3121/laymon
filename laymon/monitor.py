@@ -4,24 +4,51 @@ from .exceptions import SingleDimensionalLayerWarning, LayerRegisterException
 
 
 class ActivationMapHook:
+    """
+    Activation map hook is used to store:
+        1. Layer which is being hooked
+        2. Parameters being monitored
+        3. Handler of the hooked layer
+
+    """
+
     def __init__(self, kwargs):
         self.__dict__.update(**kwargs)
 
 
 class FeatureMapMonitor(Monitor):
+    """
+    A monitor type class for visualizing the feature maps of a neural network.
+    """
+
     def __init__(self):
-        self._layer_observers = dict()
+        self._layer_observers = dict()  # Maintains a mapping of layers/observers being monitored.
 
     def add_observer(self, layer_observer):
+        """
+        1. Creates a layer observer object.
+        2. Hooks the layer to capture the activation map of the layer.
+
+        :param layer_observer: Observer object
+        """
+
+        # Get the pyTorch layer object and layer from the observer.
         layer = layer_observer.get_layer()
         layer_name = layer_observer.get_layer_name()
+
+        # If layer is already being monitored then return.
+        if layer_name in self._layer_observers:
+            return
+
         _layer_observer = ActivationMapHook(
             {"object": layer_observer, "parameters": None, "handler": None}
         )
-        if layer_name in self._layer_observers:
-            return
         self._layer_observers[layer_name] = _layer_observer
+
+        # Create a forward hook to capture the activation map for that layer.
         handler = layer.register_forward_hook(self._get_activation_map(layer_name))
+
+        # Store the handler of the hook.
         self._layer_observers[layer_name].handler = handler
 
     def remove_observer(self, layer_observer=None, layer_name=None):

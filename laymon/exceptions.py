@@ -17,11 +17,13 @@ class LayerRegisterException(Exception):
 
 class SingleDimensionalLayerWarning(Warning):
     """
-    Waring to indicate that the layer trying to be visualized is a single
+    Warning to indicate that the layer trying to be visualized is a single
     dimensional layer.
     """
 
-    default_message = "Layer is a single dimensional layer."
+    default_message = (
+        "Layer is a single dimensional layer. Some of the displays might not with such a layer."
+    )
 
     def __init__(self, layer_name, message=default_message):
         self.layer_name = layer_name
