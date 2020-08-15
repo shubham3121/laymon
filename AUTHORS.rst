@@ -1,11 +1,11 @@
 =======
-Credits
+Authors
 =======
 
 Development Lead
 ----------------
 
-* Shubham Gupta <shubhamgupta3121@gmail.com>
+* Shubham Gupta <https://www.linkedin.com/in/shubham3121/>
 
 Contributors
 ------------

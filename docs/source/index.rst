@@ -9,8 +9,7 @@ Welcome to PyLaymon's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-   readme
+   about
    installation
    usage
    contributing
