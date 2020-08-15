@@ -17,4 +17,4 @@ formats:
 python:
   version: 3.6
   install:
-    - requirements: requirements_dev.txt
+    - requirements: pip_dep/requirements.txt
