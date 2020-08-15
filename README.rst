@@ -19,7 +19,7 @@ PyLaymon
 A package for visualizing the feature maps of a neural network
 
 
-* Installation: ```pip install laymon```
+* Installation: ``pip install laymon``
 * Documentation: https://laymon.readthedocs.io.
 
 
