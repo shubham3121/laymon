@@ -10,11 +10,11 @@ with open("README.rst") as readme_file:
 with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
-requirements = ["requirements_dev.txt"]
+requirements = ["pip_dep/requirements.txt"]
 
-setup_requirements = []
+setup_requirements = ["pip_dep/requirements_dev.txt"]
 
-test_requirements = []
+test_requirements = ["pip_dep/requirements_dev.txt"]
 
 setup(
     author="Shubham Gupta",
