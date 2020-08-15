@@ -1,1 +1,5 @@
-.. include:: ../../AUTHORS.rst
+=======
+Authors
+=======
+
+* Shubham Gupta

@@ -3,18 +3,46 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PyLaymon - A package for visualizing layers of a neural network
-==================================
+.. _topics-index:
+
+===========================================
+Welcome to PyLaymon |version| Documentation
+===========================================
+
+PyLaymon or laymon is a tool for monitoring and visualizing feature maps for a neural network.
+Currently, the PyLaymon is limited to the pytorch framework.
+
+About
+=====
+.. toctree::
+
+    about
+
+
+Installation
+============
+.. toctree::
+
+    installation
+
+
+Usage
+=====
+.. toctree::
+
+    usage
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-   about
-   installation
-   usage
-   contributing
-   authors
-   history
+    :hidden:
+
+    contributing
+
+Authors
+=======
+
+.. toctree::
+
+    authors
 
 Indices and tables
 ==================

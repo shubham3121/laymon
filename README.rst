@@ -16,17 +16,17 @@ PyLaymon
 
 
 
-This package is used to visualize the feature maps of a neural network
+A package for visualizing the feature maps of a neural network
 
 
-* Free software: MIT license
+* Installation: $ pip install laymon
 * Documentation: https://laymon.readthedocs.io.
 
 
 Features
 --------
 
-* TODO
+* Visualizing feature maps
 
 Credits
 -------
