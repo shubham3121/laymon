@@ -41,6 +41,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.viewcode",
     "sphinx_rtd_theme",
+    "autoapi.extension",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -161,3 +162,12 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
+
+# AutoApi
+autoapi_root = "api"
+autoapi_type = "python"
+autoapi_dirs = ["../../laymon"]
+
+# Napoleon settings
+napoleon_google_docstring = True
+napoleon_numpy_docstring = True

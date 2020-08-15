@@ -5,43 +5,20 @@
 
 .. _topics-index:
 
-===========================================
 Welcome to PyLaymon |version| Documentation
-===========================================
+======================================================================
 
 PyLaymon or laymon is a tool for monitoring and visualizing feature maps for a neural network.
 Currently, the PyLaymon is limited to the pytorch framework.
 
-About
-=====
 .. toctree::
+    :maxdepth: 2
+    :caption: Contents
 
     about
-
-
-Installation
-============
-.. toctree::
-
     installation
-
-
-Usage
-=====
-.. toctree::
-
     usage
-
-.. toctree::
-    :hidden:
-
     contributing
-
-Authors
-=======
-
-.. toctree::
-
     authors
 
 Indices and tables
