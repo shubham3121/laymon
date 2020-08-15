@@ -34,11 +34,6 @@ You can either clone the public repository:
 
     $ git clone git://github.com/shubham3121/laymon
 
-Or download the `tarball`_:
-
-.. code-block:: console
-
-    $ curl -OJL https://github.com/shubham3121/laymon/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -48,4 +43,3 @@ Once you have a copy of the source, you can install it with:
 
 
 .. _Github repo: https://github.com/shubham3121/laymon
-.. _tarball: https://github.com/shubham3121/laymon/tarball/master

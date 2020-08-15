@@ -5,7 +5,7 @@
 
 import unittest
 
-from laymon import laymon
+import laymon
 
 
 class TestLaymon(unittest.TestCase):
