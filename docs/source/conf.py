@@ -15,19 +15,17 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-import laymon
-
 
 # -- Project information -----------------------------------------------------
 
-project = "PyLaymon"
+project = "PyLayMon"
 copyright = "2020, Shubham Gupta"
 author = "Shubham Gupta"
 
 # The short X.Y version
-version = laymon.__version__
+version = "[0.1.0]"
 # The full version, including alpha/beta/rc tags
-release = laymon.__version__
+release = "[0.1.0]"
 
 
 # -- General configuration ---------------------------------------------------
