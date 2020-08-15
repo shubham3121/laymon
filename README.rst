@@ -6,9 +6,6 @@ PyLaymon
 .. image:: https://img.shields.io/pypi/v/laymon.svg
         :target: https://pypi.python.org/pypi/laymon
 
-.. image:: https://img.shields.io/travis/shubham3121/laymon.svg
-        :target: https://travis-ci.com/shubham3121/laymon
-
 .. image:: https://readthedocs.org/projects/laymon/badge/?version=latest
         :target: https://laymon.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
