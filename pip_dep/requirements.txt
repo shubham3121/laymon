@@ -1,7 +1,4 @@
-pip==19.2.3
-wheel==0.33.6
-watchdog==0.9.0
-torch==1.0.1
-matplotlib==3.0.1
-jupyter~=1.0.0
-notebook>=5.7.2
+pip>=19.2.3
+wheel>=0.33.6
+watchdog>=0.9.0
+matplotlib>=3.0.1

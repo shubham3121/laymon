@@ -2,7 +2,10 @@
 
 """The setup script."""
 
+import os
 from setuptools import setup, find_packages
+from os.path import join
+
 
 with open("README.rst") as readme_file:
     readme = readme_file.read()
@@ -10,11 +13,17 @@ with open("README.rst") as readme_file:
 with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
-requirements = ["pip_dep/requirements.txt"]
 
-setup_requirements = ["pip_dep/requirements_dev.txt"]
+def get_requirements(filename):
+    path = join(os.getcwd(), filename)
+    with open(path, "rb") as fp:
+        requirement_list = fp.read().decode("ascii").strip().split("\n")
+    return requirement_list
 
-test_requirements = ["pip_dep/requirements_dev.txt"]
+
+requirements = get_requirements("pip_dep/requirements.txt")
+
+test_requirements = get_requirements("pip_dep/requirements_dev.txt")
 
 setup(
     author="Shubham Gupta",
@@ -41,10 +50,10 @@ setup(
     keywords="laymon",
     name="laymon",
     packages=find_packages(include=["laymon", "laymon.*"]),
-    setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/shubham3121/laymon",
+    project_url={"Documentation": "https://laymon.readthedocs.io"},
     version="0.1.0",
     zip_safe=False,
 )
