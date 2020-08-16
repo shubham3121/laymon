@@ -2,7 +2,7 @@
 Usage
 =====
 
-How to `laymon` to monitor layers
+How to use `laymon` to monitor layers
 ---------------------------------
 To use PyLaymon in a project::
 
