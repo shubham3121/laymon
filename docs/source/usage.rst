@@ -107,3 +107,41 @@ Below is a sample example::
 The full example notebook can be found here_.
 
 .. _here: https://github.com/shubham3121/laymon/tree/master/examples
+
+
+Custom Displays
+---------------
+
+One may feel the need to have a custom display class for visualizing the feature maps. One the applications could be displaying additional meta info or using a third partly application for visualization (e.g. Grafana) instead of the matplotlib library.
+
+In order to accomplish this one can write his/her own custom display class and plugin it into the FeatureMapMonitoring instance.
+
+::
+
+    # Import the Display abstract class
+    from laymon.interfaces import Display
+    from laymon import FeatureMapMonitoring
+
+    # Create your own custom class by inheriting
+    # and implementing the methods of the Display class.
+
+    class MyCustomDisplay(Display):
+        def custom_method(self, params):
+            // My Custom method
+
+        def update_display(self, parameters, display_title):
+            // Implement this method.
+            // This method needs to be implemented,
+            // as this method is invoked by the observers/layer object being monitored to
+            // send the updated parameters to the display function
+            // Your Custom Logic.
+            // Calling your custom methods.
+
+
+    # Create instance of the FeatureMapMonitoring class
+    f_map_monitor = FeatureMapMonitoring()
+
+    # Overwrite the display class with your custom display class.
+    f_map_monitor.observer_factory.display_object = MyCustomDisplay
+
+    # Now the observers/layers being monitored point to your custom display method.
