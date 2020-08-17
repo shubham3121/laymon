@@ -26,6 +26,9 @@ Installation
 ------------
 
 * Installation: ``pip install laymon``
+
+For more details on installation, usage and contribution refer to the documentation.
+
 * Documentation: https://laymon.readthedocs.io.
 
 
