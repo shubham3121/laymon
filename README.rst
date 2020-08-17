@@ -37,7 +37,8 @@ Features
 
 * Visualizing feature maps
 
-![Feature Map Monitoring](art/FeatureMapMonitoring.gif)
+.. image:: art/FeatureMapMonitoring.gif
+
 
 Credits
 -------
