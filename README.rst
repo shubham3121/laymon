@@ -12,9 +12,7 @@ PyLaymon
 
 
 
-
-A package for visualizing the feature maps of a neural network
-
+A package for monitoring and visualizing the layers of a neural network. The motivation behind the project was to provide a tool that can help developers provide a better insight into the different layers of a neural network during the training process. Currently, the package provides the functionality to observe and envision the feature maps of a neural network. For more information refer to the documentation.
 
 Requirements
 ------------
