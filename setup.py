@@ -30,7 +30,6 @@ setup(
     author_email="shubhamgupta3121@gmail.com",
     python_requires=">=3.5",
     classifiers=[
-        "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
@@ -54,6 +53,6 @@ setup(
     tests_require=test_requirements,
     url="https://github.com/shubham3121/laymon",
     project_url={"Documentation": "https://laymon.readthedocs.io"},
-    version="1.0.0",
+    version="1.0.1",
     zip_safe=False,
 )
