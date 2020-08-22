@@ -13,23 +13,27 @@ class FeatureMapDisplay(Display):
         """
         self._figure, self._subplots, self._parameters, self.title = (None, [], None, None)
 
-    def display_params(self):
+    def display_params(self, activation, max_subplots=5):
         """Method for updating the subplots and figure with the new parameters (activation maps)."""
 
-        # Get the new activation parameters
-        activation = self._parameters
+        num_of_subplots = min(activation.size(0), max_subplots)
 
         # If this method is called for the first time, then create a figure and respective subplots.
         if self._figure is None:
-            self._figure, self._subplots = plt.subplots(activation.size(0))
+            self._figure, self._subplots = plt.subplots(num_of_subplots)
             self._figure.suptitle(self.title, fontsize=12)
             self._figure.show()
 
         # Overwrite and update each subplot against the respective activation parameters.
-        for idx in range(activation.size(0)):
-            self._subplots[idx].imshow(activation[idx], interpolation="None")
+        for idx in range(num_of_subplots):
+            self._subplots[idx].imshow(activation[idx])
         self._figure.canvas.draw()  # Overwrite the figure
         self._figure.show()  # Display the figure
+
+    def _show(self):
+        activations = self._parameters
+        for activation in activations:
+            self.display_params(activation=activation)
 
     def update_display(self, parameters, display_title):
         """
@@ -41,4 +45,4 @@ class FeatureMapDisplay(Display):
         # Update the parameters with the new values.
         self._parameters = parameters
         self.title = display_title
-        self.display_params()  # Call the method to update figure with the new parameters
+        self._show()  # Call the method to update the figures with the new parameters

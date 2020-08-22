@@ -90,7 +90,7 @@ class FeatureMapMonitor(Monitor):
     @staticmethod
     def _is_layer_single_dim(layer):
         """Checks if the layer is a single dimensional layer"""
-        return len(layer.shape[1:]) == 1
+        return len(layer.squeeze().shape[1:]) == 1
 
     def _get_activation_map(self, layer_name):
         """Hooks the layer to capture activation maps for the given layer and return the handler to the hook"""
@@ -110,6 +110,8 @@ class FeatureMapMonitor(Monitor):
         """Updates all the observers being monitored with the new parameters"""
 
         for observer_name, observer in self._layer_observers.items():
+            if observer.parameters is None:
+                continue
             if self._is_layer_single_dim(observer.parameters):
                 # If layer is a single dimensional layer, then raise a warning as an image needs
                 # to be at least of two dimensions in order to be plotted on a graph.
