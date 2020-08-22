@@ -33,9 +33,8 @@ class FeatureMapObserver(Observer):
         :return: None
         """
         # Update the display of the observer with the new parameters.
-        activations = parameters.squeeze()
-        for activation in activations:
-            self._update_display(parameters=activation, display_title=self._layer_name)
+
+        self._update_display(parameters=parameters, display_title=self._layer_name)
 
     def get_layer_name(self):
         """Returns the layer name being observed."""
